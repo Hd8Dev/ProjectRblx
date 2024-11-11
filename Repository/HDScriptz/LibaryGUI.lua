@@ -43,7 +43,7 @@ local KeyTab = Window:CreateTab("Key System|Project Rblx", 4483362458) -- Title,
 
 
 
-local Slider = Tab:CreateSlider({
+local WSSlider = Tab:CreateSlider({
    Name = "test",
    Range = {0, 100},
    Increment = 2,
@@ -54,3 +54,5 @@ local Slider = Tab:CreateSlider({
    Players.LocalPlayer.WalkSpeed = Value
    end,
 })
+
+Rayfield:LoadConfiguration()
