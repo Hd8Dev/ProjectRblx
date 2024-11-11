@@ -1,4 +1,4 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))() -- Booting the Rayfield libary
 
 
 local Window = Rayfield:CreateWindow({
@@ -41,5 +41,16 @@ local MiscTab = Window:CreateTab(" Misc|Project Rblx", 4483362458) -- Title, Ima
 
 local KeyTab = Window:CreateTab("Key System|Project Rblx", 4483362458) -- Title, Image
 
-Rayfield:LoadConfiguration()
 
+
+local Slider = Tab:CreateSlider({
+   Name = "test",
+   Range = {0, 100},
+   Increment = 2,
+   Suffix = "WalkSpeed",
+   CurrentValue = 16,
+   Flag = "WalkSlider", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   Players.LocalPlayer.WalkSpeed = Value
+   end,
+})
