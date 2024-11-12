@@ -43,7 +43,7 @@ local KeyTab = Window:CreateTab("Key System|Project Rblx", 4483362458) -- Title,
 
 
 
-local WSSlider = Tab:CreateSlider({
+local WSSlider = MiscTab:CreateSlider({
    Name = "test",
    Range = {0, 100},
    Increment = 2,
